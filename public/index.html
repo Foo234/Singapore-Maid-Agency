@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singapore Maid Agency - Filipino & Indonesian Domestic Help</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Singapore Maid Agency</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#maids">Our Maids</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="admin.html" class="admin-link">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Professional Domestic Help in Singapore</h1>
+            <p>Trusted Filipino & Indonesian Maids for Your Family</p>
+            <button class="btn-primary" onclick="document.getElementById('maids').scrollIntoView({behavior: 'smooth'})">Browse Our Maids</button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>🏠 Housekeeping</h3>
+                    <p>Professional cleaning, laundry, and household management</p>
+                </div>
+                <div class="service-card">
+                    <h3>👶 Childcare</h3>
+                    <p>Caring and experienced childcare providers for your little ones</p>
+                </div>
+                <div class="service-card">
+                    <h3>👵 Elderly Care</h3>
+                    <p>Compassionate care for senior family members</p>
+                </div>
+                <div class="service-card">
+                    <h3>🍳 Cooking</h3>
+                    <p>Experienced cooks for daily meals and meal preparation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Browse Maids Section -->
+    <section class="maids-section" id="maids">
+        <div class="container">
+            <h2>Our Professional Maids</h2>
+            <div class="filter-controls">
+                <select id="nationalityFilter" onchange="filterMaids()">
+                    <option value="">All Nationalities</option>
+                    <option value="Filipino">Filipino</option>
+                    <option value="Indonesian">Indonesian</option>
+                </select>
+            </div>
+            <div id="maidsList" class="maids-grid"></div>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeBookingModal()">&times;</span>
+            <h2>Book a Maid</h2>
+            <form id="bookingForm">
+                <input type="hidden" id="maidId">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="phone" placeholder="Your Phone" required>
+                <input type="date" placeholder="Service Date" required>
+                <input type="number" placeholder="Hours" min="1" required>
+                <select required>
+                    <option>Select Service Type</option>
+                    <option>Housekeeping</option>
+                    <option>Childcare</option>
+                    <option>Elderly Care</option>
+                    <option>Cooking</option>
+                </select>
+                <textarea placeholder="Additional Notes"></textarea>
+                <button type="submit" class="btn-primary">Submit Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div id="testimonialsList" class="testimonials-grid"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <p>📞 Phone: +65 9123 4567</p>
+                <p>📧 Email: info@sgmaidagency.com</p>
+                <p>📍 Address: 123 Singapore Street, Singapore 123456</p>
+                <p>🕐 Operating Hours: Mon-Sun, 9AM - 6PM</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Singapore Maid Agency. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
